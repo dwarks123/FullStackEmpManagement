@@ -15,8 +15,8 @@ timestamps
                 def date = new Date()
                 def dateString = dateFormat.format(date)
                 def versionString = dateString + '.' + BUILD_NUMBER
-                Version = VersionNumber versionNumberString: versionString, versionPrefix: ''
-                currentBuild.displayName = Version
+                //Version = VersionNumber versionNumberString: versionString, versionPrefix: ''
+                currentBuild.displayName = versionString
             }
 
             stage('SCM Pull')
